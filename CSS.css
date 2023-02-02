@@ -1,0 +1,159 @@
+/*:root {*/
+/*    --blue: #1e90ff;*/
+/*    --white: #ffffff;*/
+/*    --img-1: url(/Media/National-Pet-Rock-Day-640x514.jpg);*/
+/*}*/
+
+* {
+    align-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: rgba(0, 128, 0, 0.1);
+    /*background-image: var(--img-1);*/
+    /*background-repeat: repeat-x;*/
+    background-position: right top;
+    background-attachment: fixed  /*scroll''*/
+}
+
+
+h1 {
+    margin-left: 400px;
+}
+
+h1::before, h1::after {
+    font-family:  serif;
+    content:'⭐⭐⭐️️';
+    background-color: none;
+    color: red;
+    font-weight: bold;
+}
+
+h1::before {
+    margin-right: 10px;
+}
+
+h1::after {
+    margin-left: 10px;
+}
+
+h2 {
+    font-size: 1.5vw;
+    background-color: lightgrey;
+    border: 2px solid Tomato;
+    border-style: groove;
+    border-radius: 5px;
+    /*border-width: 1px;*/
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 300px;
+    margin-left: 300px;
+
+    padding-top: 5px;
+    padding-right: 3px;
+    padding-bottom: 5px;
+    padding-left: 8px;
+    width: 300px;
+    box-sizing: border-box;
+
+    text-align: center;
+    text-align: justify;
+
+}
+
+h2 {
+    border: 4px solid;
+    padding: 20px;
+    width: 300px;
+    resize: horizontal;
+    overflow: auto;
+}
+
+
+/*h2:nth-child(3) {*/
+/*    background-color: deepskyblue ;*/
+/*}*/
+
+/*h2:nth-child(even) {*/
+/*    background-color: palevioletred ;*/
+/*}*/
+
+.button {
+    font-family: "ui-sans-serif";
+    font-size: 1.5vw;
+    margin-left: 100px;
+    display: inline-grid;
+    box-sizing: border-box;
+    width: 220px;
+    height: 60px;
+    border-color: rgba(40%, 30%, 30%, 40%);
+    border-radius: 10px;
+    background: rgba(60%, 10%, 29%, 10%);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    /*box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); */
+    /*opacity: 0.6;*/
+    /*cursor: not-allowed;*/
+    /*float: left;*/
+    /*transform: translateY(4px);*/
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+
+}
+
+.button:active {
+    background-color: var(--blue);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+#rock:active {
+    background-color: blueviolet;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+
+}
+
+#scissors:active {
+    background-color: greenyellow;
+    box-shadow: 0 5px #666666;
+    transform: translateY(4px);
+
+}
+
+#rock::before {
+    content: '💎️';
+    position: absolute;
+    z-index: 1;
+
+}
+
+#paper::before {
+    content: '🧻';
+    position: absolute;
+    z-index: 1;
+}
+
+#scissors::before {
+    content: '✂';
+    position: absolute;
+    z-index: 1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 612px)
+{
+    .title{
+        text-align: center;
+    }
+    .score{
+        position: absolute;
+        top: 200px;
+        width: 100vw;
+    }
+    .options{
+        width: 100vw;
+    }
